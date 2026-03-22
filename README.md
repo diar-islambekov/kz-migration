@@ -1,11 +1,14 @@
 # Kazakhstan Internal Migration Dashboard
 
-An interactive data visualization of internal migration flows across Kazakhstan's regions from 2010 to 2025, built with Python and Plotly.
+Interactive analysis of internal migration flows across Kazakhstan's regions from 2010 to 2025, built with Python and Plotly.
+
+## View the dashboard
+
+**[Open interactive notebook on nbviewer →](https://nbviewer.org/github/diar299/kz-migration/blob/main/migration_analysis.ipynb)**
 
 ## Overview
 
-This project analyses origin-destination migration flow data from Kazakhstan's Bureau of National Statistics, covering 3,039 migration corridors across 20 regions over 8 years. The dashboard reveals the dominant urban pull of Astana, Almaty, and Shymkent — and the persistent population loss in northern and eastern oblasts.
-
+This project analyses origin-destination migration flow data from Kazakhstan's Bureau of National Statistics, covering 3,039 migration corridors across 20 regions over 8 years. The analysis reveals the dominant urban pull of Astana, Almaty, and Shymkent — and the persistent population loss in northern and eastern oblasts.
 
 ## Key findings
 
@@ -34,8 +37,8 @@ This project analyses origin-destination migration flow data from Kazakhstan's B
 ```
 kz-migration/
 ├── data/
-│   └── Internal_migration.csv   # Raw data
-├── dashboard.py                  # Main Python script
+│   └── Internal_migration.csv    # Raw data
+├── migration_analysis.ipynb      # Jupyter notebook with charts
 ├── requirements.txt              # Python dependencies
 └── README.md
 ```
@@ -53,12 +56,10 @@ cd kz-migration
 pip install -r requirements.txt
 ```
 
-**3. Run the dashboard**
+**3. Open the notebook**
 ```bash
-python dashboard.py
+jupyter notebook migration_analysis.ipynb
 ```
-
-This generates `kazakhstan_migration_dashboard.html` — open it in any browser.
 
 ## Requirements
 
@@ -67,14 +68,12 @@ pandas>=1.5.0
 plotly>=5.15.0
 ```
 
-## Dashboard panels
+## Charts
 
-1. **Net migration by region (2023)** — horizontal bar chart showing which regions gain and lose population
+1. **Net migration by region (2023)** — which regions gain and lose population
 2. **Top 10 migration corridors (2023)** — the busiest origin-destination pairs
-3. **Geographic bubble map (2023)** — spatial view of net flows, bubble size = migration intensity
-4. **City trend lines (2010–2025)** — net inflow to Astana, Almaty city, and Shymkent over time
-5. **Total migration volume by year** — overall internal mobility trend
-6. **Top origin regions (all years)** — cumulative outflow by region
+3. **City trend lines (2010–2025)** — net inflow to Astana, Almaty city, and Shymkent over time
+4. **Total migration volume by year** — overall internal mobility trend
 
 ## Author
 
